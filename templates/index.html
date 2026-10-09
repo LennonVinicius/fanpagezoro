@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="hero py-5">
+  <div class="container py-4">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="badge text-bg-success mb-3">Caçador de Piratas</span>
+        <h1 class="display-4 fw-bold">Roronoa Zoro</h1>
+        <p class="lead">Uma fanpage simples sobre o espadachim dos Chapéus de Palha.</p>
+        <p>Zoro quer se tornar o maior espadachim do mundo e luta usando três espadas.</p>
+        <a href="{{ url_for('sobre') }}" class="btn btn-success">Conhecer o Zoro</a>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img src="{{ url_for('static', filename='img/zoro-ferido.png') }}" class="img-fluid hero-img rounded" alt="Zoro">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="section-title">Fanpage</h2>
+  <div class="alert alert-success">Projeto da Atividade 3 feito com Flask, HTML, CSS e Bootstrap.</div>
+  <div class="row g-4 mt-1">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="h5">Sobre</h3>
+          <p>Conheça um pouco da história e da personalidade do Zoro.</p>
+          <a href="{{ url_for('sobre') }}" class="btn btn-outline-success">Abrir</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="h5">Espadas</h3>
+          <p>Veja as principais espadas usadas pelo personagem.</p>
+          <a href="{{ url_for('espadas') }}" class="btn btn-outline-success">Abrir</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="h5">Galeria</h3>
+          <p>Algumas imagens do Zoro em momentos diferentes.</p>
+          <a href="{{ url_for('galeria') }}" class="btn btn-outline-success">Abrir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="container py-5">
+  <h1 class="section-title">Galeria</h1>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='img/zoro-treino.png') }}" class="card-img-top galeria-img" alt="Zoro treinando">
+        <div class="card-body"><p class="mb-0">Zoro durante um treinamento.</p></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='img/zoro-ferido.png') }}" class="card-img-top galeria-img" alt="Zoro ferido">
+        <div class="card-body"><p class="mb-0">Zoro depois de uma batalha.</p></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename='img/zoro-rosto.png') }}" class="card-img-top galeria-img" alt="Zoro sorrindo">
+        <div class="card-body"><p class="mb-0">Zoro em um momento mais tranquilo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

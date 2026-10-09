@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="container py-5">
+  <h1 class="section-title">Sobre o Zoro</h1>
+  <div class="card shadow-sm border-0">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/zoro-rosto.png') }}" class="img-fluid rounded-start sobre-img" alt="Rosto do Zoro">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="h4">O espadachim do bando</h2>
+          <p>Roronoa Zoro foi um dos primeiros companheiros de Monkey D. Luffy. Ele é conhecido por sua força, disciplina e pelo estilo de três espadas.</p>
+          <p>O seu objetivo é se tornar o maior espadachim do mundo. Mesmo sendo sério nas lutas, ele também aparece em várias cenas engraçadas porque se perde com facilidade.</p>
+          <span class="badge text-bg-dark">Santoryu</span>
+          <span class="badge text-bg-success">Chapéus de Palha</span>
+          <span class="badge text-bg-secondary">Espadachim</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
