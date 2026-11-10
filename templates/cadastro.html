@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="container py-5 min-page">
+  <h1 class="mb-3">Cadastro de fãs</h1>
+  <p>Cadastre-se na nossa fanpage do Zoro.</p>
+
+  {% if erro %}
+  <div class="alert alert-danger">{{ erro }}</div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('cadastro') }}" class="card p-4 shadow-sm" style="max-width: 650px;">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input id="nome" name="nome" class="form-control" maxlength="100" value="{{ nome or '' }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input id="email" name="email" type="email" class="form-control" maxlength="150" value="{{ email or '' }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="personagem_favorito" class="form-label">Personagem favorito</label>
+      <input id="personagem_favorito" name="personagem_favorito" class="form-control" maxlength="100" value="{{ personagem or '' }}" required>
+    </div>
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+</section>
+{% endblock %}
