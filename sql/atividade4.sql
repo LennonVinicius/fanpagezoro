@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS atividade4 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE atividade4;
+
+CREATE TABLE IF NOT EXISTS fas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    personagem_favorito VARCHAR(100) NOT NULL
+);

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="container py-5 min-page">
+  <h1 class="mb-4">Fãs cadastrados</h1>
+
+  {% if request.args.get('cadastrado') == '1' %}
+  <div class="alert alert-success">Cadastro realizado com sucesso!</div>
+  {% endif %}
+
+  {% if fas %}
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Personagem favorito</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for fa in fas %}
+        <tr>
+          <td>{{ fa.id }}</td>
+          <td>{{ fa.nome }}</td>
+          <td>{{ fa.email }}</td>
+          <td>{{ fa.personagem_favorito }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="alert alert-info">Nenhum fã cadastrado.</div>
+  {% endif %}
+
+  <a href="{{ url_for('cadastro') }}" class="btn btn-success">Novo cadastro</a>
+</section>
+{% endblock %}

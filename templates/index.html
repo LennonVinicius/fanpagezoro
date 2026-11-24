@@ -20,7 +20,7 @@
 
 <section class="container py-5">
   <h2 class="section-title">Fanpage</h2>
-  <div class="alert alert-success">Projeto da Atividade 3 feito com Flask, HTML, CSS e Bootstrap.</div>
+  <div class="alert alert-success">Projeto da Atividade 4 com Flask e MySQL.</div>
   <div class="row g-4 mt-1">
     <div class="col-md-4">
       <div class="card h-100">
@@ -49,6 +49,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container mt-4">
+    <a href="{{ url_for('cadastro') }}" class="btn btn-success">Cadastrar fã</a>
+    <a href="{{ url_for('listar') }}" class="btn btn-outline-success ms-2">Ver cadastrados</a>
   </div>
 </section>
 {% endblock %}
